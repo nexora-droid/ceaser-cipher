@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Momo+Trust+Display&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Momo Trust Display';
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+}
+h1{
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+.input-group {
+    margin-bottom: 20px;
+}
+label{
+    display: block;
+    color: darkslategrey;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+textarea{
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    resize: vertical;
+    min-height: 100px;
+    transition: border-color 0.3s;
+}
+textarea:focus{
+    outline: none;
+    border-color: #667eea;
+}
+.shift-control{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+input[type="number"]{
+    width: 80px;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+input[type="number"]:focus{
+    outline: none;
+    border-color: #667eea;
+}
+input[type="range"]{
+    flex: 1;
+    height: 6px;
+    border-radius: 3px;
+    background: #e0e0e0;
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #667eea;
+    cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #667eea;
+    cursor: pointer;
+}
+button{
+    width: 100%;
+    padding: 15px;
+    background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+button:active{
+    transform: translateY(0);
+}
+.output{
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 100px;
+    word-wrap: break-word;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.output.empty{
+    color: #999;
+    font-size: italic;
+}
