@@ -7,7 +7,7 @@ const modeToggle = document.getElementById('modeToggle');
 const actionButton = document.getElementById('actionButton');
 const outputLabel = document.getElementById('outputLabel');
 const output = document.getElementById('output');
-
+const copyButton = document.getElementById('copyButton');
 function toggleMode() {
     isDecryptMode = !isDecryptMode;
     modeToggle.classList.toggle('active');
@@ -60,6 +60,24 @@ function processText(){
     }
     output.textContent = result;
     output.classList.remove('empty');
+    copyButton.style.display = "block";
+    copyButton.textContent = "Copy to Clipboard";
+    copyButton.class.remove ('copied');
+}
+function copyToClipboard(){
+    const textToCopy = output.textContent;
+    navigator.clipboard.writeText(textToCopy).then(()=>{
+        copyButton.textContent = "Copied!"
+        copyButton.classList.add('copied');
+
+        setTimeout(() => {
+            copyButton.textContent = "Copy to Clipboard";
+            copyButton.classList.remove('copied');
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+        copyButton.textContent = 'Failed to copy!';
+    })
 }
 document.getElementById('inputText').addEventListener('keypress', (e)=>{
     if (e.key === 'Enter' && e.ctrlKey) {

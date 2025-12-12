@@ -160,3 +160,15 @@ button:active{
 .toggle-switch.active .toggle-slider {
     transform: translateX(30px);
 }
+.copy-button{
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #28a745;
+    font-size: 14px;
+}
+.copy-button:hover{
+    background: #218838;
+}
+.copy-button.copied{
+    background: #5cb85c;
+}
