@@ -121,5 +121,42 @@ button:active{
 }
 .output.empty{
     color: #999;
-    font-size: italic;
+    font-style: italic;
+}
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+.toggle-label {
+    font-weight: 600;
+    color: #555;
+}
+.toggle-switch {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background: #e0e0e0;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.toggle-switch.active {
+    background: #667eea;
+}
+.toggle-slider{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.toggle-switch.active .toggle-slider {
+    transform: translateX(30px);
 }

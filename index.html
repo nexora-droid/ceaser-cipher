@@ -4,27 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Ceaser Cipher Encoder</title>
+    <title>Caesar Cipher Encoder</title>
 </head>
 <body>
     <div class="container">
-        <h1>Ceaser Cipher</h1>
+        <h1>Caesar Cipher</h1>
+        <div class="toggle-container">
+            <span class="toggle-label">Encrypt</span>
+            <div class="toggle-switch" id="modeToggle" onclick="toggleMode()">
+                <div class="toggle-slider"></div>
+            </div>
+            <span class="toggle-label">Decrypt</span>
+        </div>
         <div class="input-group">
             <label for="inputText">Message to Encrypt</label>
             <textarea id="inputText" placeholder="Enter your text to encrypt here.."></textarea>
         </div>
         <div class="input-group">
-            <label>Shit amount <span id="shiftDisplay">3</span></label>
-            <div class="shift-Control">
+            <label>Shift amount: <span id="shiftDisplay">3</span></label>
+            <div class="shift-control">
                 <input type="range" id="shiftSlider" min="1" max="25" value="3">
                 <input type="number" id="shiftNumber" min="1" max="25" value="3">
             </div>
         </div>
         <div class="input-group">
-            <button onclick="encrypt()">Encrypt Message</button>
+            <button onclick="processText()" id="actionButton">Encrypt Message</button>
         </div>
         <div class="input-group">
-            <label>Encrypted Output: </label>
+            <label id="outputLabel">Encrypted Output: </label>
             <div id="output" class="output empty">Your encrypted message will appear here!</div>
         </div>
     </div>
